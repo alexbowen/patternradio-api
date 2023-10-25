@@ -1,0 +1,9 @@
+{
+  "name": "pattern-radio-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:alexbowen/pattern-radio-api.git",
+  "author": "alexbowen <alexbowen123@googlemail.com>",
+  "license": "MIT",
+  "private": false
+}
