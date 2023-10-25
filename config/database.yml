@@ -82,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: d5avihjmv072hp
+  database: d4go1iii5n0l71
   username: Project
   password: <%= ENV["PROJECT_DATABASE_PASSWORD"] %>
