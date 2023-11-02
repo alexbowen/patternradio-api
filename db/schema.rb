@@ -40,8 +40,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_140812) do
     t.string "key", null: false
     t.string "url", null: false
     t.string "name", null: false
-    t.date "created_time"
-    t.date "updated_time"
+    t.datetime "created_time"
+    t.datetime "updated_time"
     t.integer "play_count"
     t.integer "favorite_count"
     t.integer "comment_count"

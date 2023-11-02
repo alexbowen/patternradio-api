@@ -4,8 +4,8 @@ class CreateShows < ActiveRecord::Migration[7.0]
       t.string :key, null: false, unique: true
       t.string :url, null: false, unique: true
       t.string :name, null: false, unique: true
-      t.date :created_time
-      t.date :updated_time
+      t.datetime :created_time
+      t.datetime :updated_time
       t.integer :play_count
       t.integer :favorite_count
       t.integer :comment_count
