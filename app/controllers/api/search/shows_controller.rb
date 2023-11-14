@@ -1,7 +1,7 @@
 class Api::Search::ShowsController < ApplicationController
   def index
     if params[:q].length > 0
-      shows1 = Show.search(params[:q]).order("created_time DESC").reverse
+      shows1 = Show.order("created_time DESC").search(params[:q])
       shows2 = Show.select { |show| show[:tags].any?{|tag| tag["name"].downcase.include? params[:q] } }
 
       shows = (shows1 + shows2).uniq
