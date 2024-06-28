@@ -53,6 +53,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_140812) do
     t.json "pictures"
     t.json "tags"
     t.json "user"
+    t.string "hosts", array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
