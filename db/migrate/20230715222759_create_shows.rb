@@ -12,6 +12,7 @@ class CreateShows < ActiveRecord::Migration[7.0]
       t.integer :listener_count
       t.integer :repost_count
       t.boolean :hidden_stats
+      t.string :hosts, array: true
       t.string :slug
       t.integer :audio_length
       t.json :pictures
