@@ -11,7 +11,7 @@ class Api::ShowsController < ApplicationController
       
     elsif params[:creator].present? && params[:creator] == "internal"
       if params[:filters].present? && params[:filters].length > 0
-        shows = Show.order("created_time DESC").select { |show| show[:user]["username"] == "patternradio"}.select { |show| show[:tags].any?{|tag| params[:filters].split(",").any? { |filter| filter.in?(tag["name"].downcase) } } }
+        shows = Show.order("created_time DESC").select { |show| show[:user]["username"] == "patternradio"}.select { |show| show[:tags].any?{|tag| params[:filters].split(",").any? { |filter| filter == tag["name"].downcase } } }
       else
         shows = Show.order("created_time DESC").select { |show| show[:user]["username"] == "patternradio"}
       end
